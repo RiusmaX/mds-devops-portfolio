@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0B192F;
+  --color-navy-light: #112240;
+  --color-turquoise: #64FFDA;
+  --color-slate-light: #F0F0F0;
+  --color-slate: #8892b0;
+  
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+body {
+  background-color: var(--color-navy);
+  color: var(--color-slate-light);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-turquoise);
+  color: var(--color-navy);
+}
