@@ -9,6 +9,16 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const config: Config = {
   coverageProvider: 'v8',
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/layout.tsx',
+    '!src/**/page.module.css',
+    '!**/node_modules/**',
+  ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['lcov', 'text'],
   testEnvironment: 'jsdom',
   // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
